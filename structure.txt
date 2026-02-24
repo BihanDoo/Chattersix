@@ -1,0 +1,55 @@
+this is a self hosted chat server backend. users can self host it and have fun with it.
+final versions will be compiled into a docker image (later)
+for now, as the beginning, there is no E2EE and the admins can see all the messages in the admin panel (for testing purposes)
+
+root: "/"
+admin panel: "/web-admin/index.html"
+all admin stuff: "/web-admin/"
+users' webUI: "/web/index.html"
+all user's stuff: "/web/"
+this file: "/structure.txt"
+
+
+for AI instructions{
+    when updating this file, please do not say a feature is fully working. just its implemented, since this is a testing thing, not production
+}
+
+
+the web server is with python and should expose the user's webUI to public when it's deployed in the production environment
+
+
+technologies used:
+MongoDB as the main DB
+backend in python
+
+
+
+features implemented:
+- User registration with email and password
+- User login with JWT token authentication
+- Password hashing and security
+- MongoDB user database integration
+- User authentication API endpoints (/api/register, /api/login, /api/me)
+- Responsive login and registration pages
+- Token-based authentication system
+- Duplicate username and email prevention
+- User profile/info retrieval endpoint
+- Chat dashboard interface with redesigned "hacker-style" theme
+- Chat creation endpoint (/api/chats POST), including starting a chat with another username
+- Chat list retrieval (/api/chats GET) with per-user unread message counts
+- Message sending endpoint (/api/chats/{id}/messages POST) with last message metadata
+- Message retrieval endpoint (/api/chats/{id}/messages GET) with per-user read markers
+- Server-side-rendered message HTML endpoint (/api/chats/{id}/messages/render) for safer message display
+- Real-time style chat UI with message display and auto-scroll
+- User authorization checks for chat access and message visibility+
+
+
+
+
+
+activate venv
+& "./.venv/Scripts/Activate.ps1"
+
+todos(for now):
+
+
